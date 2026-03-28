@@ -1260,5 +1260,19 @@ setTimeout(function() {
     console.error('attachCardEvents not defined');
   }
 }, 500);
-</script>
+window.addToBasket = addToBasket;
+window.removeFromBasket = removeFromBasket;
+window.changeBasketQty = changeBasketQty;
+window.updateUI = updateUI;
+window.attachCardEvents = attachCardEvents;
+  document.addEventListener('DOMContentLoaded', function() {
+  attachCardEvents();
+  updateUI();
+  // Make functions available globally
+  window.addToBasket = addToBasket;
+  window.removeFromBasket = removeFromBasket;
+  window.changeBasketQty = changeBasketQty;
+  window.updateUI = updateUI;
+  window.attachCardEvents = attachCardEvents;
+});</script>
 </html>
