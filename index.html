@@ -1251,4 +1251,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 </body>
+  <script>
+// Ensure attachCardEvents runs after everything loads
+setTimeout(function() {
+  if (typeof attachCardEvents === 'function') {
+    attachCardEvents();
+  } else {
+    console.error('attachCardEvents not defined');
+  }
+}, 500);
+</script>
 </html>
