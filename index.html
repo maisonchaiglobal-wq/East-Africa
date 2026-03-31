@@ -1246,8 +1246,13 @@ if (checkoutBtn) {
 document.addEventListener('DOMContentLoaded', function() {
   attachCardEvents();
   updateUI();
-  window.changeBasketQty = changeBasketQty;
+  // Make functions available globally
+  window.addToBasket = addToBasket;
   window.removeFromBasket = removeFromBasket;
+  window.changeBasketQty = changeBasketQty;
+  window.updateUI = updateUI;
+  window.attachCardEvents = attachCardEvents;
+});
 });
 </script>
 </body>
